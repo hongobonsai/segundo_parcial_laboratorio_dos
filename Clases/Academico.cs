@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using Clases.enums;
 
 namespace Clases
-{
+{   
+    ///
     /// <summary>
     /// Esta clase representa la clase padre de profesor y de alumno. Almacena los datos correspondientes a la persona.
     /// Hereda de Usuario
