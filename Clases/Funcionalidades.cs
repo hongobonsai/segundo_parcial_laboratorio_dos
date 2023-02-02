@@ -35,7 +35,7 @@ namespace Clases
                     nombreXml = "Alumno_" + $"{alumno.User}_" + $"{alumno.Nombre}_" + $"{alumno.Apellido}.xml";
                     // Genero el objeto de configuración de la serialización.
                     string lastPath = directorioNuevo + Path.DirectorySeparatorChar + nombreXml;
-                    serializador.Serialize(alumno, lastPath);
+                    serializador.Serializar(alumno, lastPath);
                 }
                 MessageBox.Show($"La carpeta contenedora se creó en la ruta: \n {directorioNuevo}");
             }
@@ -47,7 +47,7 @@ namespace Clases
         }
         public static bool ExportAlumnosDeMateriaJson(string nombreMateria, List<Alumno> alumnosList)
         {
-            var serializador = new SerializacionXml<Alumno>();
+            var serializador = new SerializacionJson<Alumno>();
             try
             {
                 string nombreJson;
@@ -60,7 +60,7 @@ namespace Clases
                     Alumno alum = alumno;
                     nombreJson = "Alumno_" + $"{alumno.User}_" + $"{alumno.Nombre}_" + $"{alumno.Apellido}.json";
                     string pathFinal = directorioNuevo + Path.DirectorySeparatorChar + nombreJson;
-                    serializador.Serialize(alum, pathFinal);
+                    serializador.Serializar(alum, pathFinal);
                 }
                 MessageBox.Show($"La carpeta contenedora se creó en la ruta: \n {directorioNuevo}");
             }
@@ -72,7 +72,7 @@ namespace Clases
         }
         public static bool ExportAlumnosDeMateriaCsv(string nombreMateria, List<Alumno> alumnosList)
         {
-            var serializador = new SerializacionXml<Alumno>();
+            var serializador = new SerializacionCsv<Alumno>();
             try
             {
                 string nombreCsv;
@@ -85,7 +85,7 @@ namespace Clases
                     Alumno alum = alumno;
                     nombreCsv = "Alumno_" + $"{alumno.User}_" + $"{alumno.Nombre}_" + $"{alumno.Apellido}.csv";
                     string pathFinal = directorioNuevo + Path.DirectorySeparatorChar + nombreCsv;
-                    serializador.Serialize(alumno, pathFinal);
+                    serializador.Serializar(alumno, pathFinal);
                 }
                 MessageBox.Show($"La carpeta contenedora se creó en la ruta: \n {directorioNuevo}");
             }

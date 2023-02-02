@@ -12,7 +12,7 @@ namespace alonso_nicolas_primer_parcial_labo.Clases
     public class SerializacionXml<T> : ISerializador<T>
         where T : class, new()
     {
-        public void Serialize(T serializedObj, string path)
+        public void Serializar(T serializedObj, string path)
         {
             try
             {

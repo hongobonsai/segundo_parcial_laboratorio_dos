@@ -13,6 +13,6 @@ namespace alonso_nicolas_primer_parcial_labo.Clases
 {
     public interface ISerializador<T> where T : class
     {
-        void Serialize(T obj, string path);
+        void Serializar(T obj, string path);
     }
 }
